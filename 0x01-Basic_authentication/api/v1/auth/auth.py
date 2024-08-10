@@ -4,6 +4,7 @@
 from flask import request
 from typing import List, TypeVar
 
+
 class Auth():
     """ Auth class """
 
@@ -20,7 +21,7 @@ class Auth():
         return False
 
     def authorization_header(self, request=None) -> str:
-        """ auth header 
+        """ auth header
 
         Args:
             request: the request
@@ -31,7 +32,7 @@ class Auth():
         return None
 
     def current_user(self, request=None) -> TypeVar('User'):
-        """ current user 
+        """ current user
         Args:
             request: the req
 

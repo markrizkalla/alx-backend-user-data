@@ -17,7 +17,7 @@ class Auth():
         Return:
             bool
         """
-        if path is None or excluded_paths is None or len(exclused_paths) == 0:
+        if not path or not excluded_paths or len(exclused_paths) == 0:
             return True
 
         if path[-1] != '/':

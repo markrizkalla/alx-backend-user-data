@@ -9,11 +9,12 @@ class Auth():
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """ require auth
-        Args"
-        path: str
-        excluded_paths: excluded path
+        Args
+            path: str
+            excluded_paths: excluded path
 
-        Return: bool
+        Return:
+            bool
         """
 
         return False
@@ -22,19 +23,19 @@ class Auth():
         """ auth header 
 
         Args:
-        request: the request
+            request: the request
 
         Return:
-        str
+            str
         """
         return None
 
     def current_user(self, request=None) -> TypeVar('User'):
         """ current user 
         Args:
-        request: the req
+            request: the req
 
         Return:
-        user
+            user
         """
         return None

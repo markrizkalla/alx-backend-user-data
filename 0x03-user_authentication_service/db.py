@@ -42,3 +42,19 @@ class DB:
         session.add(user)
         session.commit()
         return user
+
+    def find_user_by(self, **kwargs) -> User:
+        """
+        find_user_by
+        """
+        if not kwargs:
+            raise InvalidRequestError("No arguments provided")
+
+        try:
+            user = self._session.query(User).filter_by(**kwargs).one()
+        except NoResultFound:
+            raise NoResultFound("No user found for the given parameters")
+        except InvalidRequestError:
+            raise InvalidRequestError("Invalid parameters provided")
+
+        return user
